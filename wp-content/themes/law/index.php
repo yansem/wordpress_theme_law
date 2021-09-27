@@ -1,14 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-<head>
-<?php wp_head(); ?>
-</head>
-<body>
-
-<div class="fh5co-loader"></div>
-
-
-
+<?php get_header(); ?>
     <aside id="fh5co-hero" class="js-fullheight">
         <div class="flexslider js-fullheight">
             <ul class="slides">
