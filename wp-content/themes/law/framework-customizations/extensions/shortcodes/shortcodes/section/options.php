@@ -27,13 +27,13 @@ $options = array(
 
     //custom
     'custom_id' => array(
-        'label' => __('Custom ID', 'clean'),
-        'desc'  => __('Assign an ID for the section', 'clean'),
+        'label' => __('Custom ID', 'fw'),
+        'desc'  => __('Assign an ID for the section', 'fw'),
         'type'  => 'text',
     ),
     'custom_class' => array(
-        'label' => __('Custom Class', 'clean'),
-        'desc'  => __('Assign a class for the section', 'clean'),
+        'label' => __('Custom Class', 'fw'),
+        'desc'  => __('Assign a class for the section', 'fw'),
         'type'  => 'text',
     ),
 );

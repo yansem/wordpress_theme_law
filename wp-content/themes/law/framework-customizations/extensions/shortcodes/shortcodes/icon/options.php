@@ -16,7 +16,7 @@ $options = array(
     //custom
     'custom_link'    => array(
         'type'  => 'text',
-        'label' => __( 'Custom Link', 'clean' ),
-        'desc'  => __( 'Link for the icon', 'clean' ),
+        'label' => __( 'Custom Link', 'fw' ),
+        'desc'  => __( 'Link for the icon', 'fw' ),
     ),
 );
