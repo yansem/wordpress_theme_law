@@ -6,6 +6,12 @@
  *
  * @package Law
  */
+require_once get_template_directory() . '/Law_Header_Menu.php';
+
+function debug($data)
+{
+    echo "<pre>" . print_r($data, 1) . "</pre>";
+}
 
 if ( ! defined( '_S_VERSION' ) ) {
 	// Replace the version number of the theme on each release.

@@ -35,6 +35,7 @@
 
                                 'theme_location' => 'header-menu',
                                 'container' => false,
+                                'walker' => new Law_Header_Menu(),
 
                         ] ); ?>
 
