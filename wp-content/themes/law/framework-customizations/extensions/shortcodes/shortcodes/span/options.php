@@ -3,20 +3,28 @@
 }
 
 $options = array(
-	'icon'       => array(
+	'span_icon'       => array(
 		'type' => 'icon',
-		'label' => __( 'Icon', 'fw' )
+		'label' => __( 'Span Icon', 'fw' )
 	),
-	'title'    => array(
+	'span_content'    => array(
 		'type'  => 'text',
-		'label' => __( 'Title', 'fw' ),
-		'desc'  => __( 'Icon title', 'fw' ),
+		'label' => __( 'Span Content', 'fw' ),
+		'desc'  => __( 'Span Content', 'fw' ),
 	),
-
-    //custom
-    'custom_link'    => array(
+    'span_class'    => array(
         'type'  => 'text',
-        'label' => __( 'Custom Link', 'clean' ),
-        'desc'  => __( 'Link for the icon', 'clean' ),
+        'label' => __( 'Span Class', 'fw' ),
+        'desc'  => __( 'Span Class', 'fw' ),
+    ),
+    'span_id'    => array(
+        'type'  => 'text',
+        'label' => __( 'Span ID', 'fw' ),
+        'desc'  => __( 'Span ID', 'fw' ),
+    ),
+    'span_data_attrs'    => array(
+        'type'  => 'text',
+        'label' => __( 'Attributes', 'fw' ),
+        'desc'  => __( 'Attributes', 'fw' ),
     ),
 );
