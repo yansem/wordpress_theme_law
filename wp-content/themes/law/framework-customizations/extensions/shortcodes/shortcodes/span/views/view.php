@@ -5,16 +5,17 @@
 /**
  * @var array $atts
  */
-debug($atts);
 ?>
-<!--<span class="fw-icon">-->
-<!--    --><?php //if(isset($atts['custom_link']) && $atts['custom_link']): ?>
-<!--        <a href="--><?php //echo esc_attr($atts['custom_link']); ?><!--"><i class="--><?php //echo esc_attr($atts['icon']); ?><!--"></i></a>-->
-<!--    --><?php //else: ?>
-<!--	    <i class="--><?php //echo esc_attr($atts['icon']); ?><!--"></i>-->
-<!--    --><?php //endif; ?>
-<!--	--><?php //if (!empty($atts['title'])): ?>
-<!--		<br/>-->
-<!--		<span class="list-title">--><?php //echo $atts['title'] ?><!--</span>-->
-<!--	--><?php //endif; ?>
-<!--</span>-->
+
+<span
+    id="<?php if(!empty($atts['span_id'])) echo $atts['span_id']; ?>"
+    class="<?php if(!empty($atts['span_class'])) echo $atts['span_class']; ?>"
+    <?php if(!empty($atts['span_data_attrs'])) echo $atts['span_data_attrs']; ?>
+>
+    <?php if(!empty($atts['span_icon'])): ?>
+        <i class="<?php echo $atts['span_icon']; ?>"></i>
+    <?php endif; ?>
+    <?php if(!empty($atts['span_content'])): ?>
+        <?php echo $atts['span_content']; ?>
+    <?php endif; ?>
+</span>
