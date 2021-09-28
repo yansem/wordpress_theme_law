@@ -173,6 +173,9 @@ function law_scripts() {
 	wp_enqueue_script( 'law-jquery-magnific-popup', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', [], false, true);
 	wp_enqueue_script( 'law-magnific-popup-options', get_template_directory_uri() . '/assets/js/magnific-popup-options.js', [], false, true);
 	wp_enqueue_script( 'law-main', get_template_directory_uri() . '/assets/js/main.js', [], false, true);
+    wp_localize_script('law-main', 'lawData', [
+        'themePath' => get_template_directory_uri()
+    ]);
 
 //	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 //		wp_enqueue_script( 'comment-reply' );

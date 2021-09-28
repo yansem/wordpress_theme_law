@@ -6,6 +6,30 @@
 	str = str.slice(0,-1) + '<span>' + str.substr(-1) + '</span>';
 	$('#fh5co-logo a').html(str);
 
+	$('.fw_form_fw_form').on('submit', function (){
+		let $this = $(this),
+			data = $this.serialize(),
+			formAlert = $('.form-alert'),
+			loader = '<img src="' + lawData.themePath + '/assets/images/loader.gif">',
+			btn = $this.find('button');
+		$.ajax({
+			type: 'POST',
+			data: data,
+			beforeSend: function (){
+				btn.attr('disabled', true);
+				formAlert.removeClass('alert-success alert-danger');
+				btn.after(loader);
+			},
+			success: function (res){
+				console.log(res);
+
+			},
+			error: function (){
+				alert('Ошибка!');
+			}
+		});
+		return false;
+	});
 
 	var isMobile = {
 		Android: function() {
