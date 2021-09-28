@@ -8,5 +8,5 @@
  */
 ?>
 <div>
-	<input type="submit" value="<?php echo esc_attr( $submit_button_text ) ?>"/>
+    <button type="submit" class="btn btn-primary"><?php echo esc_attr( $submit_button_text ) ?></button>
 </div>
