@@ -6,7 +6,9 @@
  * @var array $atts
  */
 ?>
-
+<?php if(!empty($atts['span_wrapper'])): ?>
+    <div <?php if(!empty($atts['span_wrapper_class'])) echo "class='{$atts['span_wrapper_class']}'"; ?>>
+<?php endif; ?>
 <span
     id="<?php if(!empty($atts['span_id'])) echo $atts['span_id']; ?>"
     class="<?php if(!empty($atts['span_class'])) echo $atts['span_class']; ?>"
@@ -19,3 +21,6 @@
         <?php echo $atts['span_content']; ?>
     <?php endif; ?>
 </span>
+<?php if(!empty($atts['span_wrapper'])): ?>
+    </div>
+<?php endif; ?>
