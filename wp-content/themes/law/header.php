@@ -22,6 +22,7 @@
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<div class="fh5co-loader"></div>
 <div id="page">
     <nav class="fh5co-nav" role="navigation">
         <div class="top-menu">
