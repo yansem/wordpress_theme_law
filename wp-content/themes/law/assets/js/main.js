@@ -6,29 +6,46 @@
 	str = str.slice(0,-1) + '<span>' + str.substr(-1) + '</span>';
 	$('#fh5co-logo a').html(str);
 
-	$('.fw_form_fw_form').on('submit', function (){
-		let $this = $(this),
+	$('.fw_form_fw_form').on('submit', function(){
+		var $this = $(this),
+			btn = $this.find('button'),
 			data = $this.serialize(),
 			formAlert = $('.form-alert'),
-			loader = '<img src="' + lawData.themePath + '/assets/images/loader.gif">',
-			btn = $this.find('button');
+			loader = '<img class="loader" src="' + lawData.themePath + '/assets/images/loader.gif">';
+
 		$.ajax({
 			type: 'POST',
 			data: data,
-			beforeSend: function (){
+			beforeSend: function(){
 				btn.attr('disabled', true);
-				formAlert.removeClass('alert-success alert-danger');
+				formAlert.removeClass('alert-success alert-danger').empty();
 				btn.after(loader);
 			},
-			success: function (res){
-				console.log(res);
-
+			success: function(responce){
+				formAlert.fadeIn(300, function(){
+					console.log(responce);
+					if(responce.success){
+						formAlert.addClass('alert-success').text(responce.data.flash_messages.success.fw_ext_contact_form_process);
+						$this[0].reset();
+					}else{
+						formAlert.addClass('alert-danger');
+						var errors = '';
+						for(var key in responce.data.errors){
+							errors += responce.data.errors[key] + '<br>';
+						}
+						formAlert.html(errors);
+					}
+				});
+				$('.loader').remove();
+				btn.attr('disabled', false);
 			},
-			error: function (){
-				alert('Ошибка!');
+			error: function(){
+				alert('Error!');
 			}
 		});
+
 		return false;
+
 	});
 
 	var isMobile = {
