@@ -109,3 +109,19 @@ a.btn.btn-primary:visited {
 #fh5co-about .fw-icon i{
     font-size: 20px;
 }
+
+#fh5co-footer #menu-footer-menu {
+    padding: 0;
+    margin: 0;
+}
+#fh5co-footer #menu-footer-menu li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#fh5co-footer #menu-footer-menu li a:hover {
+    text-decoration: underline;
+}
+#fh5co-footer #menu-footer-menu li a {
+    color: rgba(0, 0, 0, 0.5);
+}
