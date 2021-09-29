@@ -23,7 +23,8 @@
 }
 
 #fh5co-practice .fh5co-heading,
-#fh5co-blog .fh5co-heading {
+#fh5co-blog .fh5co-heading,
+#fh5co-about .fh5co-heading {
     padding: 0 16%;
 }
 
@@ -98,4 +99,13 @@
 
 a.btn.btn-primary:visited {
     color: #ffffff;
+}
+#fh5co-about .fw-team .fw-team-inner .fw-team-name span {
+    font-size: 16px;
+}
+#fh5co-about .fw-icon {
+    padding: 0 10px;
+}
+#fh5co-about .fw-icon i{
+    font-size: 20px;
 }
