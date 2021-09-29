@@ -1,5 +1,6 @@
 #home-slider > .fw-container-fluid,
-#fh5co-content > .fw-container-fluid {
+#fh5co-content > .fw-container-fluid,
+#law-map > .fw-container-fluid {
     padding: 0;
 }
 #fh5co-content .choose{
@@ -124,4 +125,8 @@ a.btn.btn-primary:visited {
 }
 #fh5co-footer #menu-footer-menu li a {
     color: rgba(0, 0, 0, 0.5);
+}
+
+.p-0 {
+    padding: 0;
 }
