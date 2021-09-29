@@ -22,7 +22,8 @@
     margin-bottom: 15px;
 }
 
-#fh5co-practice .fh5co-heading {
+#fh5co-practice .fh5co-heading,
+#fh5co-blog .fh5co-heading {
     padding: 0 16%;
 }
 
@@ -93,4 +94,8 @@
     outline: none;
     box-shadow: none;
     border-color: #F95959;
+}
+
+a.btn.btn-primary:visited {
+    color: #ffffff;
 }
