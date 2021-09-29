@@ -1,40 +1,29 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Law
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+    <div id="fh5co-blog" class="fh5co-bg-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <?php if (have_posts()) : while (have_posts()) :
+                        the_post(); ?>
+                        <!-- post -->
+                        <?php if (has_post_thumbnail()) {
+                        $img_url = get_the_post_thumbnail_url();
+                    } else {
+                        $img_url = 'http://picsum.photos/800/570';
+                    } ?>
+                        <h1><?php the_title(); ?></h1>
+                        <img class="pull-left law-post-image" src="<?php echo $img_url; ?>" alt="">
+                        <p><?php the_content(''); ?></p>
+                    <?php endwhile; ?>
+                        <!-- post navigation -->
+                    <?php else: ?>
+                        <!-- no posts found -->
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<main id="primary" class="site-main">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation(
-				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'law' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'law' ) . '</span> <span class="nav-title">%title</span>',
-				)
-			);
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>
