@@ -38,4 +38,5 @@ $number = abs((int)$atts['recent_number']) ? $atts['recent_number'] : 1;
     <?php else: ?>
         <!-- no posts found -->
     <?php endif; ?>
+    <?php wp_reset_postdata(); ?>
 </div>
